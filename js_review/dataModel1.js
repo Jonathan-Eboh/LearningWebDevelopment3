@@ -114,10 +114,25 @@ printBestGrade(students3); // uncomment when ready to test
 
 
 function printAverageGrade(students) {
-  //your code here...
+    //your code here...
+    for (let i = 0; i < students.length; i++) { //iterates through students
+        // console.log(students[i]["name"],students[i]["grades"] );
+        let student = students[i];
+        let grades = student.grades;
+        // let bestGrade = grades[0].score;
+        // console.log(bestGrade); //This is how we index down to one specific grade, in this case it ill be the first one
+        //so we then need to compare all the grades in that array
+        let sum = 0;
+        for (let j = 0; j < grades.length; j++) { //iterates through grades
+            sum += grades[j].score;
+
+        }
+        let avgScore = sum / grades.length;
+        console.log(student.name, avgScore);
+    }
 }
 
-// printAverageGrade(students3); // uncomment when ready to test
+printAverageGrade(students3); // uncomment when ready to test
 
 //~~~~BONUS
 
@@ -130,7 +145,22 @@ function printAverageGrade(students) {
 // Test 2: Winnie
 
 function printBestStudent(students) {
-  //your code here...
+    //your code here...
+    for (let i = 0; i < students.length; i++) { //iterates through students
+        // console.log(students[i]["name"],students[i]["grades"] );
+        let student = students[i];
+        let grades = student.grades;
+        // let bestGrade = grades[0].score;
+        // console.log(bestGrade); //This is how we index down to one specific grade, in this case it ill be the first one
+        //so we then need to compare all the grades in that array
+        let sum = 0;
+        for (let j = 0; j < grades.length; j++) { //iterates through grades
+            sum += grades[j].score;
+
+        }
+        let avgScore = sum / grades.length;
+        console.log("Test "+ student.id+": "+student.name);
+    }
 }
 
-// printBestStudent(students3); // uncomment when ready to test
+printBestStudent(students3); // uncomment when ready to test
